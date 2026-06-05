@@ -1,64 +1,75 @@
-# Adb Backup
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# adb-backup
 
-[中文说明](./README_zh.md)
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/adb-backup)
 
-Backup Android SMS via ADB and store in database with webhook notification
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-## How it works
+## Architecture
 
-Uses `adb shell content query --uri content://sms/` to periodically read SMS messages from the phone.
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-If a notification address is configured, a POST request will be sent to the notification address every time a new SMS is read
+## Install
 
-## Build/Run
-
-```go
-cp example.env .env
-
-go mod download
-// build
-// go build
-// run
-// go run
-// use .env file
-go run -tags=dev .
-```
-
-## Docker
-
-docker images `tablebird/adb-backup`
-
-example: [docker-compose.yml](./docker-compose.yml)
-
-### Build Docker Image
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
 ```bash
-docker build -t tablebird/adb-backup .
+git clone https://github.com/Interested-Deving-1896/adb-backup.git
+cd adb-backup
 ```
 
-## Environment Variables and Default Values
+## Usage
 
-- `ADB_HOST`: adb server host (default: localhost), Prioritize connecting to adb services for this host address
-- `ADB_PORT`: adb server port (default: 5037)
-- `DB_HOST`: PostgreSQL database host (default: postgres.lan)
-- `DB_PORT`: Database port number (default: 5432)
-- `DB_USER`: Database user (default: backup)
-- `DB_PASS`: Database password (default: backup)
-- `DB_NAME`: Database name (default: backup)
-- `DB_SSLMODE`: Whether to enable SSL (default: disable)
-- `DEBUG_LOG`: Whether to enable debug logging (default: false)
-- `READ_INTERVAL`: Message reading interval (default: 5s)
-- `WAIT_DEVICE_INTERVAL`: Interval for checking Android device connection (default: 10)
-- `NOTIFY_WEBHOOK_URL`: POST notification URL for new SMS after starting monitoring (default: empty, no notification)
-- `NOTIFY_STATUS_WEBHOOK_URL`: POST notification URL for device status after starting monitoring (default: empty, no notification)
-- `WEB_ADDRESS`: Web service address (default: all/0.0.0.0)
-- `WEB_PORT`: Web service port (default: 8080)
-- `ADMIN_NAME`: Initial administrator username (default: admin)
-- `ADMIN_PASS`: Initial administrator password (default: admin)
-- `LDAP_HOST`: LDAP server host (default: empty, no LDAP authentication)
-- `LDAP_PORT`: LDAP server port (default: 389)
-- `LDAP_ENABLE_TLS` : Whether to enable TLS (default: false)
-- `LDAP_BIND_DN`: LDAP bind DN (default: empty, no LDAP authentication)
-- `LDAP_BIND_PASS`: LDAP bind password (default: empty, no LDAP authentication)
-- `LDAP_BASE_DN`: LDAP base DN (default: empty)
-- `LDAP_USER_FILTER`: LDAP user filter (default: empty)
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/adb-backup`](https://github.com/Interested-Deving-1896/adb-backup) and mirrored through:
+
+```
+Interested-Deving-1896/adb-backup  ──►  OpenOS-Project-OSP/adb-backup  ──►  OpenOS-Project-Ecosystem-OOC/adb-backup
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
